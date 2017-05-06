@@ -1,0 +1,20 @@
+# OS Configuration files
+desktop.ini
+.DS_STORE
+
+# Visual Studio Files
+*.suo
+*.sln
+*.sdf
+*.opensdf
+*.filters
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Object code
+out/
+build/
+Debug/
+Release/
+*.obj
