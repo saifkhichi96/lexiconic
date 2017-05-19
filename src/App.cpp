@@ -57,7 +57,9 @@ void StartGLUT()
 	App.run();
 }
 
-
+// Uncomment the following line to start App
+//#define APP_RUN
+#ifdef APP_RUN
 int main()
 {
 	FreeConsole();
@@ -93,3 +95,4 @@ int main()
 	system("pause");
 	return EXIT_SUCCESS;
 }
+#endif
