@@ -11,8 +11,8 @@
 using std::string;
 using std::vector;
 
-#include "ListSingle.h"
-typedef Single_List<Word> WordList;
+#include "SortedList.h"
+typedef SortedList<Word> WordList;
 
 /*
 A hybrid data structure made up of 3D array of linked-lists (or dynamic arrays).

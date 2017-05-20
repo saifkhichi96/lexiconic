@@ -11,7 +11,7 @@ Singly Linked List
 Each node is linked to only one more node. Can only navigate forward, from head to tail
 */
 template <typename T>
-class Single_List
+class SortedList
 {
 protected:
 	struct Node
@@ -33,11 +33,10 @@ protected:
 	void	insertDescending(const T&);		// Inserts data in descending order
 
 public:
-			Single_List();					// Default public constructor
-			~Single_List();					// Destructor
+			SortedList();					// Default public constructor
+			~SortedList();					// Destructor
 
 	void	insert(T);						// Inserts new data in specified order (ascending by default)
-	void	append(T);						// Inserts new data at end of the array
 	
 	void	remove(unsigned int);			// Removes node from specified position
 	void	clear();						// Deletes all nodes
@@ -48,8 +47,8 @@ public:
 	T&		operator[](uint);				// Returns reference to the element at given index
 
 	void	sort();							// Sorts the list in specified order (ascending by default)
-	void	setOrder(bool);					// Sets sort order of the list (true->ascending, false->descending)
-	bool	getOrder();						// Indicates if sort order of the list (true->ascending, false->descending)
+	void	setAscending(bool);				// Sets sort order of the list (true->ascending, false->descending)
+	bool	isAscending();					// Indicates if sort order of the list (true->ascending, false->descending)
 };
 
-#include "ListSingle.inl"
+#include "SortedList.inl"

@@ -1,6 +1,6 @@
 
 template <typename T>
-Single_List<T>::Single_List()
+SortedList<T>::SortedList()
 	: head(NULL), tail(NULL), count(0), sortedAscending(true)
 {
 
@@ -8,21 +8,24 @@ Single_List<T>::Single_List()
 
 
 template <typename T>
-Single_List<T>::~Single_List()
+SortedList<T>::~SortedList()
 {
 	clear();
 }
 
 template <typename T>
-void Single_List<T>::insert(T value)
+void SortedList<T>::insert(T value)
 {
-	if (sortedAscOrder()) insertAscending(value);
-
-	else if (sortedDescOrder()) insertDescending(value);
+	if (sortedAscending) {
+		insertAscending(value);
+	}
+	else {
+		insertDescending(value);
+	}
 }
 
 template <typename T>
-void Single_List<T>::insertAscending(const T& val)
+void SortedList<T>::insertAscending(const T& val)
 {
 	Node *newNode = new Node(val);
 	count++;
@@ -69,7 +72,7 @@ void Single_List<T>::insertAscending(const T& val)
 }
 
 template <typename T>
-void Single_List<T>::insertDescending(const T& val)
+void SortedList<T>::insertDescending(const T& val)
 {
 	Node *newNode = new Node(val);
 	count++;
@@ -116,27 +119,7 @@ void Single_List<T>::insertDescending(const T& val)
 }
 
 template <typename T>
-void Single_List<T>::append(T val)
-{
-	Node *newNode = new Node(val);
-	count++;
-
-	// If this is the first node, this is the head and tail of list
-	if (!head)
-	{
-		head = newNode;
-		tail = newNode;
-	}
-
-	else
-	{
-		tail->next = newNode;
-		tail = newNode;
-	}
-}
-
-template <typename T>
-void Single_List<T>::remove(unsigned int position)
+void SortedList<T>::remove(unsigned int position)
 {
 	// If list is alreay empty, exit from the function
 	if (!head) return;
@@ -179,7 +162,7 @@ void Single_List<T>::remove(unsigned int position)
 }
 
 template <typename T>
-void Single_List<T>::clear()
+void SortedList<T>::clear()
 {
 	// If list is alreay empty, exit from the function
 	if (!head)	return;
@@ -213,14 +196,14 @@ void Single_List<T>::clear()
 }
 
 template <typename T>
-unsigned int Single_List<T>::size()
+unsigned int SortedList<T>::size()
 {
 	// Return number of nodes in the list
 	return count;
 }
 
 template <typename T>
-T* Single_List<T>::search(const T& val)
+T* SortedList<T>::search(const T& val)
 {
 	auto temp = head;
 
@@ -243,7 +226,7 @@ T* Single_List<T>::search(const T& val)
 }
 
 template <typename T>
-T& Single_List<T>::operator[](unsigned int index)
+T& SortedList<T>::operator[](unsigned int index)
 {
 	// Check for an out of bonds index
 	if (index > size())
@@ -258,19 +241,19 @@ T& Single_List<T>::operator[](unsigned int index)
 }
 
 template <typename T>
-void Single_List<T>::sort()
+void SortedList<T>::sort()
 {
 
 }
 
 template <typename T>
-void Single_List<T>::setOrder(bool ascending)
+void SortedList<T>::setAscending(bool ascending)
 {
 	sortedAscending = ascending;
 }
 
 template <typename T>
-bool Single_List<T>::getOrder()
+bool SortedList<T>::isAscending()
 {
 	return sortedAscending;
 }

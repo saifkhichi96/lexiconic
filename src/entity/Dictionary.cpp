@@ -76,7 +76,7 @@ bool Dictionary::insert(const string& word, const string& def)
 
 	if (loacteList(word, row, col, layer) == true)
 	{
-		wordList[row][col][layer].append(Word(toUpper(word), def));
+		wordList[row][col][layer].insert(Word(toUpper(word), def));
 		return true;
 	}
 
