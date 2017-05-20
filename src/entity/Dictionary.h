@@ -11,16 +11,8 @@
 using std::string;
 using std::vector;
 
-#ifdef ARRAY
-#include "../util/DynamicArray.h"
-typedef DynamicArray<Word> WordList;
-#endif
-
-#ifdef LIST
-#include "../util/ListSingle.h"
+#include "ListSingle.h"
 typedef Single_List<Word> WordList;
-#endif
-
 
 /*
 A hybrid data structure made up of 3D array of linked-lists (or dynamic arrays).

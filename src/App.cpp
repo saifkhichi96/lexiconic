@@ -2,7 +2,6 @@
 #include <chrono>
 #include <thread>
 #include <ctime>
-#include "util/Map.hpp"
 #include "view/GUI.hpp"
 
 #pragma comment (lib, "../libs/SmartGL.lib")
