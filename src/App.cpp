@@ -56,12 +56,13 @@ void StartGLUT()
 	App.run();
 }
 
-// Uncomment the following line to start App
-//#define APP_RUN
-#ifdef APP_RUN
+
+
+#include "../tests/TestSuite.hpp"
+
 int main()
 {
-	FreeConsole();
+	TestSuite::execute();
 	srand(time(NULL));
 
 	try {
@@ -94,4 +95,3 @@ int main()
 	system("pause");
 	return EXIT_SUCCESS;
 }
-#endif
