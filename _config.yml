@@ -1,1 +1,8 @@
 theme: jekyll-theme-minimal
+
+title: Lexiconic | Saif's Portfolio
+description: Lexiconic is an English language dictionary app for Windows PCs written in C++ with OpenGL.
+logo: "http://saifkhichi96.github.io/favicon.ico"
+
+show_downloads: "false"
+google_analytics: 174802021
