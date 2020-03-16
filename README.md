@@ -1,9 +1,6 @@
-# Lexiconic
-
+[Back to Projects](https://saifkhichi96.github.io/projects/)
 ## Overview
 Lexiconic is an English language dictionary application. In addition to common dictionary features (i.e. lookup meanings of words), it also allows users to build their English vocabulary and IQ skills with some built-in games.
-
-![Feature Image](http://saifkhichi96.github.io/projects/apps/lexiconic/portfolio.png)
 
 ### Platforms/Tools
 This is a desktop application developed for Windows PCs.
